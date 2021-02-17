@@ -1,0 +1,21 @@
+RewriteEngine On
+
+RewriteRule ^search/(.*)$ index.php?controller=search&key=$1
+RewriteRule ^(.*).html$ index.php?controller=$1
+
+#rewrite trang danh muc
+RewriteRule ^product/category/(.*)/(.*)$ index.php?controller=product_category&id=$1
+#rewrite trang chi tiet
+RewriteRule ^product/detail/(.*)/(.*)$ index.php?controller=product_detail&id=$1
+
+RewriteRule ^news/detail/(.*)/(.*)$ index.php?controller=news_detail&id=$1
+
+RewriteRule ^news/(.*)$ index.php?controller=news&p=$1
+
+RewriteRule ^register/success$ index.php?controller=register&act=success
+
+RewriteRule ^login/fail$ index.php?controller=login&act=fail
+
+RewriteRule ^order_detail/(.*)$ index.php?controller=order_detail&order_id=$1
+
+RewriteRule ^order/(.*)$ index.php?controller=order&p=$1
